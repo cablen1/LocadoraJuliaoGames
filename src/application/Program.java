@@ -28,10 +28,13 @@ public class Program {
 		} else if(c.get(Calendar.HOUR) > 12 && c.get(Calendar.HOUR) < 18) {
 			System.out.println("Boa tarde, " + name + ", temos essa lista de jogos disponíveis: \n");
 
-		} else {
-			System.out.println("Boa tarde, " + name + ", temos essa lista de jogos disponíveis: \n");
-
+		} else if(c.get(Calendar.HOUR) >18){
+			System.out.println("Boa noite, " + name + ", temos essa lista de jogos disponiveis: \n");	
+		}else {
+			System.out.println("Boa Madrugada");
 		}
+		
+		
 		Lista list = new Lista();
 
 		list.addJogos(new Jogos(1, "The last of us", 20.00));
@@ -53,7 +56,7 @@ public class Program {
 		System.out.println("### COMPRAR ###");
 		
 		for(int i = 0; i < cont; i ++) {
-			System.out.print("Digite o ID do jogo: ");
+			System.out.print("Digite o ID do jogo de 1 a 5: ");
 			int idGame = scan.nextInt();
 
 			System.out.print("Deseja adicionar mais jogos à lista (y/n)? ");
